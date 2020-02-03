@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html>
+<head>
+        <span style="font-family: monospace;"id="time"><time></time></span>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script>
+        function validateForm() {
+             var x = document.forms["myForm"]["uname"].value;
+             var y = document.forms["myForm"]["psw"].value;
+             if (x.indexOf(' ') >= 0 || y.length <= 8) {
+                    alert("Name must not have space between and password must be greater than 8 characters");
+             return false;
+                }
+            } 
+
+            function calcRandom(){
+                var x = document.forms["random-generator"]["number"].value;
+                if(x < 0){
+                    alert('The number should be greater than 0');
+                    return false;
+                }
+                var random = Math.random();
+                random = random * x;
+                var y = parseInt(1 + random);
+                document.getElementById("result").value = y;
+                return false;
+            
+            function totalCost(){
+                
+                var cost = document.forms["subscription"]["sub"]
+                if(sub.value == "Weekly"){
+                    cost.value = 500;
+                    return false;
+                }
+                else if(sub.value == "Monthly"){
+                    cost.value = 1000;
+                    return false;
+                }
+                else if(sub.value == "Yearly"){
+                    cost.value = 2000;
+                    return false;
+                }
+                return false;
+            }
+            }
+        </script>
+        <style>
+            p {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: red
+            }   
+
+            a {
+                color: aqua
+            }
+
+            li{
+                color: blue
+            }
+        </style>
+        <title>News today</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <header>
+        <div id="nav-div">
+                <img id='comp-logo'src="https://1000logos.net/wp-content/uploads/2016/11/CNN-Logo.png" alt="logo"  width="50px">
+                <a href="#puppy">See a puppy?</a> 
+                <a href="#footer">Bottom</a> 
+                <a href="#middle">Middle</a> 
+        </div> 
+        </header>
+    </head>
+    <body>
+        <div class="login-container">
+            <form action="" name="myForm" onsubmit="return validateForm()">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+      
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            </form>
+        </div>
+
+        <div class="random-container">
+            <form action="" name="random-generator" onsubmit="return calcRandom()">
+                <label for="number"><b>Random</b></label>
+                <input type="number" name="number" placeholder="Enter a number of your choice" required>
+
+                <label for="result"><b>Result</b></label>
+                <input id="result" type="number" name="result">
+                <button type="submit">Generate random number</button>
+            </form>
+        </div>
+
+        <div class="subscription">
+            <form action="" name="subscription-form" onsubmit="return totalCost()">
+                <input type="radio" id="week" name="sub" value="Weekly" checked> Weekly<br>
+                <input type="radio" id="month" name="sub" value="Monthly">Monthly<br>
+                <input type="radio" id="year" name="sub" value="Yearly"> Yearly 
+                <input type="text" name="totalcost" id="totalcost">
+                <button type="submit">subscribe</button>
+              </form> 
+        </div>
+        <h1 class="heading" id="top">Today's highlights</h1>
+        <div id ="link-div">
+        <a href="world.html" class="sub-heading"><h2>World</h2></a>
+        <a href="india.html" class="sub-heading"><h2>India</h2></a>
+        <a href="karnataka.html" class="sub-heading"><h2>Karnataka</h2></a>
+        <a href="mangalore.html" class="sub-heading"><h2>Mangalore</h2></a>
+        </div>
+        <h1 class="heading">Top News from around the world</h1>
+        <section>
+        <article><button onclick="hide()" id="firstp"></button><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+        <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+        <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+         <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+        <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+       <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+         <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+        <p id="middle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p>
+         <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+       <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.
+           <img src="https://specials-images.forbesimg.com/imageserve/5bb22ae84bbe6f67d2e82e05/416x416.jpg?background=000000&cropX1=904&cropX2=1403&cropY1=262&cropY2=761" alt="">
+       </p></article>
+        <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+        <article><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p></article>
+
+        <div id="puppy" style="width:200px; font-size:80%; text-align:center;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS50o1uuzjIzhrLIGAD7z8wg0DPVJlA1lfsBslLFIuCEeOS5QAN" alt="alternate text" width="200px" height="height" style="padding-bottom:0.5em;" />Puppies</div>
+
+        <p><mark>Lorem ipsum dolor sit</mark> amet, consectetur adipisicing elit. Amet, reprehenderit temporibus 
+        itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, reprehenderit temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p>
+        <p>Lorem ipsum dolor sit amet, <mark>consectetur adipisicing elit. Amet, reprehenderit</mark> temporibus itaque illum architecto quis fuga fugiat libero aspernatur ab reiciendis nesciunt adipisci accusamus dolores cum dolorem blanditiis, optio officia consequuntur nam maxime, minus ullam. Nobis, itaque, libero voluptatibus reiciendis facilis enim corporis veniam veritatis non nam quaerat labore. Quaerat, debitis fugiat ex, voluptatibus recusandae voluptatum incidunt ad corrupti ducimus, laudantium aut dicta enim quam soluta consectetur aspernatur laborum vel atque? Architecto magni, earum nemo cupiditate blanditiis est animi fuga maiores dicta nesciunt illum ut molestias accusantium recusandae quia corporis at sit perspiciatis quis facilis iusto! Id doloribus saepe labore.</p>
+        </section>
+        <p style="color:black">Page visits Index: <meter value="91" min="0" max="100" low="40" high="90" optimum="100">A+</meter></p>
+        <p style="color:black">Page visits World: <meter value="56" min="0" max="100" low="40" high="90" optimum="100">A+</meter></p>
+        <p style="color:black">Page visits Karnataka: <meter value="45" min="0" max="100" low="40" high="90" optimum="100">A+</meter></p>
+        <p style="color:black">Page visits Mangalore: <meter value="25" min="0" max="100" low="40" high="90" optimum="100">A+</meter></p>
+        <p style="color: black">Page visits India: <meter value="92" min="0" max="100" low="40" high="90" optimum="100">A+</meter></p>
+
+        <ul>
+            <h3>Our reporters are.</h1>
+                <li style="color:blueviolet">Robert</li>
+                <li style="color:blue">Mike</li>
+                <li style="color:aquamarine">Jones</li>
+                <li style="color:maroon">Harry</li>
+        </ul>
+        <h3>Want to subscribe to our news letter?</h3>
+            <form>
+            <input type="email" placeholder="Enter your email" required><br>
+            </form>
+            <h3>Choose one or more!</h3>
+            <form>
+            <input type="checkbox" name="Option" value="World">World<br>
+            <input type="checkbox" name="Option" value="India">India<br>
+            <input type="checkbox" name="Option" value="karnataka">Karnataka<br>
+            <input type="checkbox" name="Option" value="Mangalore">Mangalore<br>
+            </form>
+            <form>          
+                <input type="submit" value="submit" id="submit-btn">
+            </form>          
+
+        </div>
+        <div class="table-div">
+        <table>
+            <th>Page</th>
+            <th>articles</th>
+            <th>visits</th>
+            <tr><td>World</td><td>200<td>50</td></tr>
+            <tr><td>World</td><td>200<td>50</td></tr>
+            <tr><td>World</td><td>200<td>50</td></tr>
+        </table>
+    </div>
+    <div>
+    <iframe id="iframe" width="560" height="315" src="https://www.youtube.com/embed/H1elmMBnykA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" align="center" allowfullscreen></iframe>
+    </div>
+        <a href="#top">Go back to the top</a><br>
+        <a href="http://www.google.com" target="_blank">Go to google</a>
+    
+    
+    </body>
+    <footer id="footer">
+            <details>
+                    <summary>Copyright. 2020-2077</summary>
+                    <p style="color:blue"> -Designed by Akshith Bellare. All Rights Reserved.</p>
+                    <p style="color:blue">All content and graphics on this web site are the property of Axebell corp.</p>
+                  </details> 
+    </footer>
+</html>	
