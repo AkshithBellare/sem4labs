@@ -1,0 +1,12 @@
+name="Akshith"
+
+localf(){
+	local name="Paul"
+	return
+}
+
+localf
+
+echo "$name"
+
+#just declaring a variable inside a function doesnt make it local

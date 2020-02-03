@@ -1,0 +1,11 @@
+read -p 'How old are you?' age
+
+if [ $age -ge 18 ]
+then
+	echo "You can get married"
+elif [ $age -eq 17 ]
+then 	
+	echo "You can get married next year"
+else
+	echo "You cant marry"
+fi 

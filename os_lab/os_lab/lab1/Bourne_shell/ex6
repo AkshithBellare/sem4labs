@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "The number of files in the directory: ` expr $(ls -l | wc -l) - 1`"

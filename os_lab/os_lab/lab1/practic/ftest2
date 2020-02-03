@@ -1,0 +1,9 @@
+getSum(){
+	local num1=$1
+	local num2=$2
+	local sum=$((num1+num2))
+	echo $sum
+}
+
+sum=$(getSum 3 4)
+echo "$sum"

@@ -1,0 +1,11 @@
+echo "Enter the first file:"
+read file1
+echo "Enter the second file:"
+read file2
+cp $file1 $file2
+if [ "$?" -eq 0 ]
+then
+	echo "Copying successful"
+else 
+	echo "Copying failed"
+fi

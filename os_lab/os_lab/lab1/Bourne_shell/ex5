@@ -1,0 +1,13 @@
+echo "Enter filename:"
+read filename
+
+ls -l $filename
+if [ "$?" -eq 0 ]
+then
+	echo "File exists"
+	exit 0
+else 	
+	echo "File doesn't exist"
+	exit 0
+fi
+

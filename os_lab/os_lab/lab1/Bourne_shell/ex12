@@ -1,0 +1,15 @@
+for passed in "$@"
+do
+	if [[ -d "$passed" ]]
+	then
+		echo  "$passed is a directory"
+	else
+		if [[ -f "$passed" ]]
+		then
+			echo "$passed is a file"
+		else
+			echo "$passed is not valid"
+			exit 1
+		fi
+	fi
+done

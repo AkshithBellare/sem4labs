@@ -1,0 +1,8 @@
+echo "enter the filename"
+read fname
+echo "enter start"
+read s
+echo "enter end"
+read n
+sed -n $s,$n\p $fname | cat > newline
+cat newline

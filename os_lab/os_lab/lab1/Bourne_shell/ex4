@@ -1,0 +1,29 @@
+read -p "How many numbers?" numOfValues
+
+echo "Enter $numOfValues numbers."
+arr=()
+for (( i = 0; i < numOfValues; i++ ))
+do
+   read n
+   arr+=( $n )
+done
+
+read -p "Enter the search element" num
+
+eleExists=0
+for(( i = 0; i < numOfValues; i++))
+do
+if [ $num -eq ${arr[i]} ]
+then
+	echo "element exists"
+	eleExists=1
+	exit 0
+fi
+done
+
+if [ $eleExists -eq 0 ]
+then
+	echo "Element does'nt exist"
+fi
+
+echo "${arr[@]}"

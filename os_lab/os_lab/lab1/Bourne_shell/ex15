@@ -1,0 +1,11 @@
+echo "Enter a number between 0-9"
+exit=0
+while [ $exit -ne 1 ]
+do
+	read a
+	if ((RANDOM % 10 == a))
+	then
+		echo "Right!"
+		exit=1
+	fi
+done
